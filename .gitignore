@@ -1,3 +1,7 @@
 .pioenvs
 .piolibdeps
+.idea
+cmake-build-debug
+src/References
 CMakeListsPrivate.txt
+lib
