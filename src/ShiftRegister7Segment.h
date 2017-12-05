@@ -21,7 +21,7 @@ public:
                           uint8_t OEPin = 0, unsigned int interval = 100);
 
     void display(double value);
-    void display(float value, uint8_t decimalPoint);
+    void display(double value, uint8_t decimalPoint);
     void blink();
     void begin();
 

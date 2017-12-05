@@ -31,16 +31,8 @@ void ShiftRegister7Segment::display(double value) {
     }
 }
 
-void ShiftRegister7Segment::begin() {
-    pinMode(mDataPin, OUTPUT);
-    pinMode(mClockPin, OUTPUT);
-    pinMode(mLatchPin, OUTPUT);
-    pinMode(mOEPin, OUTPUT);
-
-}
-
-void ShiftRegister7Segment::display(float value, uint8_t decimalPoint) {
-    //Declareappropriate parameters, and then call function
+void ShiftRegister7Segment::display(double value, uint8_t decimalPoint) {
+    //Declare appropriate parameters, and then call function
     byte digitArray[numberOfDigits];
 
     printDigitFunc(value,digitArray, decimalPoint);
@@ -51,6 +43,14 @@ void ShiftRegister7Segment::display(float value, uint8_t decimalPoint) {
         shiftOut(mDataPin,mClockPin,LSBFIRST,digit);
     }
     digitalWrite(mLatchPin, HIGH);
+}
+
+void ShiftRegister7Segment::begin() {
+    pinMode(mDataPin, OUTPUT);
+    pinMode(mClockPin, OUTPUT);
+    pinMode(mLatchPin, OUTPUT);
+    pinMode(mOEPin, OUTPUT);
+
 }
 
 /**

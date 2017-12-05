@@ -1,6 +1,7 @@
 
 #include <Arduino.h>
 
+//This is a template + data file
 
 
 static const byte digitCodeMap[] = {
@@ -17,6 +18,13 @@ static const byte digitCodeMap[] = {
         0b01101111, // 9   "9"
 };
 
+/**
+ * A generic print digit function that takes an input and format it to a relevant array taken as another input
+ * @tparam N Number of digits, template parameter, same as numberOfDigits defined in .h file
+ * @param input Input value to be converted to digits
+ * @param digitArray An empty array of digit, will be changed in the function to a full array of digits
+ * @param decimalPoint position of the decimal point
+ */
 template<int N>
 void printDigits(double input, byte *digitArray, int decimalPoint){
     int digit;

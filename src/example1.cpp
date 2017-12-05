@@ -5,9 +5,17 @@
 #include "ShiftRegister7Segment.h"
 
 //Go to the library header file and change number of digits if not 4
+
+//Constructor parameters:
+//1) dataPin
+//2) clockPin
+//3) latchPin
+//4) OEPin, optional
+//5) blinkInterval(milliseconds), optional
 ShiftRegister7Segment display1(3,4,5,6,150);
 
 void setup(){
+    //Initialize any associated pins
     display1.begin();
 }
 
