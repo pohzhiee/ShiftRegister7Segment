@@ -20,10 +20,8 @@ public:
     ShiftRegister7Segment(uint8_t dataPin, uint8_t clockPin, uint8_t latchPin,
                           uint8_t OEPin = 0, unsigned int interval = 100);
 
-    void display(double value);
-    void display(double value, uint8_t decimalPoint);
+    void display(double value, int decimalPoint = -1);
     void blink();
-    void begin();
 
     void setInterval(unsigned int mInterval);
 
